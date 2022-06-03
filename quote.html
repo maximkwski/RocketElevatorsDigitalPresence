@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Request a Quote - Rocket Elevators</title>
+    <meta name="description" content="" />
+    <meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+    <!-- mobile settings -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+    <!-- WEB FONTS : use %7C instead of | (pipe) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+    <!-- CORE CSS -->
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- THEME CSS -->
+    <link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+    <!-- PAGE LEVEL SCRIPTS -->
+    <link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/color_scheme/red.css" rel="stylesheet" type="text/css" id="color_scheme" />
+</head>
+
+<body class="smoothscroll enable-animation">
+    <!-- wrapper -->
+    <div id="wrapper">
+
+        <div id="header" class="navbar-toggleable-md sticky clearfix">
+
+            <!-- TOP NAV -->
+            <header id="topNav">
+                <div class="container">
+
+                    <!-- Mobile Menu Button -->
+                    <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+                                <i class="fa fa-bars"></i>
+                            </button>
+
+
+                    <!-- Logo -->
+                    <a class="logo float-left" href="#top">
+                        <img src="../../Rocket_Elevator_Assets/R2.png" alt="" />
+                    </a>
+
+                    <!-- 
+                                Top Nav 
+                                
+                                AVAILABLE CLASSES:
+                                submenu-dark = dark sub menu
+                            -->
+                    <div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+                        <nav class="nav-main">
+
+                            <!--
+                                        NOTE
+                                        
+                                        For a regular link, remove "dropdown" class from LI tag and "dropdown-toggle" class from the href.
+                                        Direct Link Example: 
+    
+                                        <li>
+                                            <a href="#">HOME</a>
+                                        </li>
+                                    -->
+                            <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+                                <li class="active">
+                                    <!-- HOME -->
+                                    <a href="index.html">
+                                                    HOME
+                                                </a>
+                                </li>
+
+                                <li class="dropdown">
+                                    <!-- services -->
+                                    <a class="dropdown-toggle" href="#">
+                                            SERVICES
+                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="residential.html">Residential</a></li>
+                                        <li><a href="commercial.html">Commertial</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <!-- PORTFOLIO-->
+                                    <a href="index.html#portfolio">
+                                                    PORTFOLIO
+                                                </a>
+                                </li>
+                                <li>
+                                    <!-- NEWS -->
+                                    <a href="index.html#news">
+                                                    NEWS
+                                                </a>
+                                </li>
+
+                                <!-- <li>
+                                            <!- BLOG ->
+                                            <a class="external" href="blog-default-aside-left.html">
+                                                BLOG
+                                            </a>
+                                        </li> -->
+
+                                <li>
+                                    <!-- CLIENTS -->
+                                    <a href="index.html#clients">
+                                                CLIENTS
+                                            </a>
+                                </li>
+                                <li>
+                                    <!-- CONTACT -->
+                                    <a href="index.html#contact">
+                                                    CONTACT
+                                                </a>
+                                </li>
+                            </ul>
+
+                        </nav>
+                    </div>
+
+                </div>
+            </header>
+
+        </div>
+        <section>
+            <div class="container">
+                <div class="blog-post-item">
+                    <h1>Request a Quote:</h1>
+                    <form id="myForm" enctype="multipart/form-data">
+                        <fieldset>
+                            <!-- <input type="hidden" name="action" value="contact_send" /> -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label for="building-type">Building Type</label>
+                                    <select class="form-control pointer" name="building-type" id="building-type">
+                                                    <option value="">---Select---</option>
+                                                    <option  id="residential" value="residential">Residential</option>
+                                                    <option  id="commercial" value="commercial">Commercial</option>
+                                                    <option  id="corporate" value="corporate">Corporate</option>
+                                                    <option  id="hybrid" value="hybrid">Hybrid</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <!--1-->
+                            <div class="col-md-4" id="number-of-apartments" style="display:none">
+                                <label for="number-of-apartments-input">The number of apartments in the building</label>
+                                <input required type="number" min="0" value="" class="form-control" name="number-of-apartments-input" id="number-of-apartments-input">
+                            </div>
+                            <!--2-->
+                            <div class="col-md-4" id="number-of-floors" style="display:none">
+                                <label for="number-of-floors-input">The number of floors contained in the building, excluding basements</label>
+                                <input required type="number" min="0" value="" class="form-control" name="number-of-floors-input" id="number-of-floors-input">
+                            </div>
+                            <!--3-->
+                            <div class="col-md-4" id="number-of-basements" style="display:none">
+                                <label for="number-of-basements-input">The number of basements contained in the building</label>
+                                <input required type="number" min="0" value="" class="form-control" name="number-of-basements-input" id="number-of-basements-input">
+                            </div>
+
+                            <!--4-->
+                            <div class="col-md-4" id="number-of-companies" style="display:none">
+                                <label for="number-of-companies-iput">The number of distinct businesses.</label>
+                                <input required type="number" min="0" value="" class="form-control" name="number-of-companies-iput" id="number-of-companies-iput">
+                            </div>
+
+                            <!--5-->
+                            <div class="col-md-6" id="number-of-parking-spots" style="display:none">
+                                <label for="number-of-parking-spot-input">The number of parking space available</label>
+                                <input required type="number" min="0" value="" class="form-control" name="number-of-parking-spots-input" id="number-of-parking-spot-input">
+                            </div>
+
+                            <!--6-->
+                            <div class="col-md-6" id="number-of-elevators" style="display:none">
+                                <label for="number-of-elevators-input">The number of elevator cages to be deployed</label>
+                                <input required type="number" min="0" value="" class="form-control" name="number-of-elevators-input" id="number-of-elevators-input">
+                            </div>
+
+                            <!--7-->
+                            <div class="col-md-3" id="number-of-corporations" style="display:none">
+                                <label for="number-of-corporations-input">The number of separate tenant companies</label>
+                                <input required type="number" min="0" value="" class="form-control" name="number-of-corporations-input" id="number-of-corporations-input">
+                            </div>
+
+                            <!--8-->
+                            <div class="col-md-3" id="maximum-occupancy" style="display:none">
+                                <label for="maximum-occupancy-input">The maximum number of occupants per floor</label>
+                                <input required type="number" min="0" value="" class="form-control" name="maximum-occupancy-input" id="maximum-occupancy-input">
+                            </div>
+
+                            <!--9-->
+                            <div class="col-md-4" id="business-hours" style="display:none">
+                                <label for="business-hours-input">The number of hours of activity of the building (the maximum being 24)</label>
+                                <input required type="number" min="0" max="24" value="" class="form-control" name="business-hours-input" id="business-hours-input">
+                            </div>
+
+
+                        </fieldset>
+                    </form>
+
+
+                </div>
+
+
+                <div class="btn-group-lg" role="group" id="products" aria-label="Basic radio toggle button group" style="position:relative; left:300px">
+                    <input type="radio" class="btn-check" name="product" id="standard">
+                    <label class="btn btn-outline-danger" for="standard">Standard</label> &nbsp;
+
+                    <input type="radio" class="btn-check" name="product" id="premium">
+                    <label class="btn btn-outline-danger" for="premium">Premium</label> &nbsp;
+
+                    <input type="radio" class="btn-check" name="product" id="excelium">
+                    <label class="btn btn-outline-danger" for="excelium">Excelium</label>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-3">
+                        <label for="elevator-amount">N. of Elevators needed</label>
+                        <input type="text" class="" name="elevator-amount" id="elevator-amount" readonly>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="elevator-unit-price">The unit price of each elevator</label>
+                        <input type="text" class="" name="elevator-unit-price" id="elevator-unit-price" readonly>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="elevator-total-price">The total price of the elevators</label>
+                        <input type="text" class="" name="elevator-total-price" id="elevator-total-price" readonly>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="installation-fees">The installation fees</label>
+                        <input type="text" class="" name="installation-fees" id="installation-fees" readonly>
+                    </div>
+                </div>
+                <hr>
+                <div class="row" style="justify-content: center">
+                    <div class="col-md-4">
+                        <label for="final-price"><strong>The final price</strong></label>
+                        <input type="text" class="" name="final-price" id="final-price" readonly>
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+        </section>
+
+
+
+        <!-- FOOTER -->
+        <footer id="footer">
+            <div class="container">
+
+
+                <div class="row">
+
+                    <!-- col #1 -->
+                    <div class="col-md-8">
+
+                        <h3 class="letter-spacing-1">WHY US?</h3>
+
+                        <!-- Small Description -->
+                        <p>
+                            Rocket Elevators is the leading manufacturer of elevator systems. The developments made by Muxx allowed the construction of skyscrapers equipped with safe elevator systems. Muxx has installed elevators in several of the most famous buildings such as the
+                            Eiffel Tower, the Empire State Building, the World Trade Center, The Twilight Zone Tower of Terror, The Petronas Twin Towers, and the Burj Khalifa. In the commercial sphere in Spain, Muxx has worked for the main hotel chains.<br/>                            We have the conviction that we create the most innovative and reliable products on the market. Contact us today for any questions you might have.
+
+                        </p>
+                        <h2>(418) 555-1234</h2>
+                    </div>
+                    <!-- /col #1 -->
+
+                    <!-- col #2 -->
+                    <div class="col-md-4">
+                        <h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
+
+                        <!-- Newsletter Form -->
+                        <p>Subscribe to Our Newsletter to get Important News & Offers</p>
+
+                        <form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                <input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="submit">Subscribe</button>
+                                </span>
+                            </div>
+                        </form>
+                        <!-- /Newsletter Form -->
+
+
+                    </div>
+                    <!-- /col #2 -->
+
+                </div>
+
+
+            </div>
+
+            <div class="copyright">
+                <div class="container">
+                    <ul class="float-right m-0 list-inline mobile-block">
+                        <li><a>Terms &amp; Conditions</a></li>
+                        <li>&bull;</li>
+                        <li><a>Privacy</a></li>
+                    </ul>
+                    &copy; All Rights Reserved, Rocket Elevators Inc
+                </div>
+            </div>
+
+        </footer>
+        <!-- /FOOTER -->
+
+
+
+    </div>
+
+    <script>
+        const choice = document.getElementById("building-type");
+        choice.addEventListener("change", (e) => {
+            if (e.target.value === "residential") {
+                resetVal();
+                hideAll();
+                document.getElementById("number-of-apartments").style.display = "";
+                document.getElementById("number-of-floors").style.display = "";
+                document.getElementById("number-of-basements").style.display = "";
+            } else if (e.target.value === "commercial") {
+                resetVal();
+                hideAll();
+                document.getElementById("number-of-floors").style.display = "";
+                document.getElementById("number-of-basements").style.display = "";
+                document.getElementById("number-of-companies").style.display = "";
+                document.getElementById("number-of-parking-spots").style.display = "";
+                document.getElementById("number-of-elevators").style.display = "";
+            } else if (e.target.value === "corporate") {
+                resetVal();
+                hideAll();
+                document.getElementById("number-of-floors").style.display = "";
+                document.getElementById("number-of-basements").style.display = "";
+                document.getElementById("number-of-parking-spots").style.display = "";
+                document.getElementById("number-of-corporations").style.display = "";
+                document.getElementById("maximum-occupancy").style.display = "";
+
+            } else if (e.target.value === "hybrid") {
+                resetVal();
+                hideAll();
+                document.getElementById("number-of-floors").style.display = "";
+                document.getElementById("number-of-basements").style.display = "";
+                document.getElementById("number-of-parking-spots").style.display = "";
+                document.getElementById("number-of-corporations").style.display = "";
+                document.getElementById("maximum-occupancy").style.display = "";
+                document.getElementById("business-hours").style.display = "";
+
+            } else {
+                resetVal();
+                hideAll();
+            }
+
+
+        });
+
+        // function resetVal() {
+        //     document.getElementById("").reset();
+        // }
+
+        function resetVal() {
+            document.getElementById("number-of-apartments").value = "";
+            document.getElementById("number-of-floors").value = "";
+            document.getElementById("number-of-basements").value = "";
+            document.getElementById("number-of-companies").value = "";
+            document.getElementById("number-of-parking-spots").value = "";
+            document.getElementById("number-of-elevators").value = "";
+            document.getElementById("number-of-corporations").value = "";
+            document.getElementById("maximum-occupancy").value = "";
+            document.getElementById("business-hours").value = "";
+        }
+
+        function hideAll() {
+            document.getElementById("number-of-apartments").style.display = "none";
+            document.getElementById("number-of-floors").style.display = "none";
+            document.getElementById("number-of-basements").style.display = "none";
+            document.getElementById("number-of-companies").style.display = "none";
+            document.getElementById("number-of-parking-spots").style.display = "none";
+            document.getElementById("number-of-elevators").style.display = "none";
+            document.getElementById("number-of-corporations").style.display = "none";
+            document.getElementById("maximum-occupancy").style.display = "none";
+            document.getElementById("business-hours").style.display = "none";
+        }
+
+        //MY VARIABLES HERE
+        let numOfElevators = document.getElementById("number-of-elevators-input"),
+            elevatorAmount = document.getElementById("elevator-amount"),
+            price = document.getElementById("products"),
+            total_price = document.getElementById("elevator-total-price"),
+            unitPrice = document.getElementById("elevator-unit-price"),
+            fee = document.getElementById("installation-fees"),
+            final_price = document.getElementById("final-price");
+
+
+
+        //QUALITY OF PRODUCT CHOICE
+        price.addEventListener("change", (e) => {
+            if (e.target.id === "standard") {
+                document.getElementById("elevator-unit-price").value = 7565;
+                fee.value = 10 + "%";
+                totalPrice();
+
+            }
+            if (e.target.id === "premium") {
+                document.getElementById("elevator-unit-price").value = 12345;
+                fee.value = 13 + "%";
+                totalPrice();
+
+            }
+            if (e.target.id === "excelium") {
+                document.getElementById("elevator-unit-price").value = 15400;
+                fee.value = 16 + "%";
+                totalPrice();
+
+            }
+        });
+
+
+
+        //commercial #of elevators needed 
+        numOfElevators.addEventListener("input", function() {
+            elevatorAmount.value = numOfElevators.value;
+            totalPrice();
+        });
+
+        //total price for commercial RESULT
+        // numOfElevators.addEventListener("input", totalPrice);
+
+        //RESIDENTIAL
+        const numOfApts = document.getElementById("number-of-apartments-input");
+        const numOfFloors = document.getElementById("number-of-floors-input");
+        numOfApts.addEventListener("input", handleResidentials)
+        numOfFloors.addEventListener("input", handleResidentials)
+
+        function handleResidentials() {
+            const apts = document.getElementById("number-of-apartments-input").value;
+            const floors = document.getElementById("number-of-floors-input").value;
+            if (apts && floors) {
+                // elevatorAmount = document.getElementById("elevator-amount");
+                let avgPerFloor = Math.ceil(parseInt(apts) / parseInt(floors) / 6);
+                let res_columns = Math.ceil(parseInt(floors) / 20);
+                elevatorAmount.value = res_columns * avgPerFloor
+
+
+                totalPrice();
+            }
+        }
+
+        //CORPORATE HYBRID
+        const max_occupants = document.getElementById("maximum-occupancy-input");
+        const floors_num = document.getElementById("number-of-floors-input");
+        const basements_num = document.getElementById("number-of-basements-input");
+        max_occupants.addEventListener("input", handleCorpHybrid);
+        floors_num.addEventListener("input", handleCorpHybrid);
+        basements_num.addEventListener("input", handleCorpHybrid);
+
+
+        function handleCorpHybrid() {
+            const tenants = document.getElementById("maximum-occupancy-input").value;
+            const corp_floors = document.getElementById("number-of-floors-input").value;
+            const corp_basements = document.getElementById("number-of-basements-input").value;
+            if (tenants && corp_floors && corp_basements) {
+                let tenantsTotal = parseInt(tenants) * (parseInt(corp_floors) + parseInt(corp_basements));
+                let elevatorAmountBefore = Math.floor(tenantsTotal / 1000);
+
+                let columns = Math.ceil((parseInt(corp_floors) + parseInt(corp_basements)) / 20);
+                let elev_per_column = Math.ceil(elevatorAmountBefore / columns);
+                elevatorAmount.value = parseInt(elev_per_column) * parseInt(columns);
+
+
+                totalPrice();
+            }
+
+        }
+
+        // Function for total price of elevators 
+        function totalPrice() {
+            total_price.value = elevatorAmount.value * unitPrice.value;
+
+            let feeAmount = total_price.value * (parseInt(fee.value) / 100);
+            final_price.value = new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+                currencyDisplay: 'narrowSymbol'
+            }).format(parseInt(total_price.value) + feeAmount);
+
+        }
+
+
+        //  new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', currencyDisplay: 'narrowSymbol'}).format(parseInt(total_price.value) + feeAmount);
+
+
+        //     new Intl.NumberFormat('en-US', {
+        //         style: 'currency',
+        //         currency: 'USD',
+        //         currencyDisplay: 'narrowSymbol'
+        //     }).format(unit_p);
+        //     new Intl.NumberFormat('en-US', {
+        //         style: 'currency',
+        //         currency: 'USD',
+        //         currencyDisplay: 'narrowSymbol'
+        //     }).format(total_p);
+        //     new Intl.NumberFormat('en-US', {
+        //         style: 'currency',
+        //         currency: 'USD',
+        //         currencyDisplay: 'narrowSymbol'
+        //     }).format(final_p);
+
+
+        // }
+    </script>
+
+</body>
+
+</html>
